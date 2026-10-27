@@ -42,13 +42,13 @@ function Bill({ amount, className = "" }: { amount: number; className?: string }
       <img src={guilloche} alt="" className="absolute inset-0 h-full w-full object-cover opacity-50 mix-blend-luminosity" />
       <div className="absolute inset-2 rounded-lg border border-gold/30" />
       <div className="absolute inset-0 flex items-center justify-between px-6">
-        <span className="font-display text-4xl text-gold-gradient">${amount}</span>
+        <span className="font-display text-4xl text-gold-soft">${amount}</span>
         <div className="grid h-16 w-16 place-items-center rounded-full border border-gold/50 guilloche-lines">
-          <span className="font-display text-2xl text-gold">$</span>
+          <span className="font-display text-2xl text-gold-soft">$</span>
         </div>
-        <span className="font-display text-4xl text-gold-gradient">{amount}</span>
+        <span className="font-display text-4xl text-gold-soft">{amount}</span>
       </div>
-      <span className="absolute bottom-3 left-6 font-mono text-[9px] tracking-[0.3em] text-gold/70">SOFTDEAL · TRC-20 · SD{amount}0124</span>
+      <span className="absolute bottom-3 left-6 font-mono text-[9px] tracking-[0.3em] text-gold-soft/70">SOFTDEAL · TRC-20 · SD{amount}0124</span>
       <div className="pointer-events-none absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-gold-soft/25 to-transparent animate-shine" />
     </div>
   );
@@ -83,7 +83,7 @@ function Index() {
 
       {/* Hero */}
       <section className="relative">
-        <img src={guilloche} alt="" width={1600} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-25" />
+        <img src={guilloche} alt="" width={1600} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-30 mix-blend-multiply grayscale-[30%]" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background" />
         <div className="relative mx-auto grid max-w-7xl gap-16 px-6 pb-28 pt-20 lg:grid-cols-[1.15fr_1fr] lg:pt-28">
           <div>
