@@ -28,7 +28,7 @@ export function MoneyCursor({ onEarn }: { onEarn: (n: number) => void }) {
       setTimeout(() => s.remove(), 950);
     };
     const click = (e: globalThis.MouseEvent) => {
-      const amount = [1, 5, 10, 20, 50, 100][Math.floor(Math.random() * 6)];
+      const amount = [1, 5, 10, 20, 50, 100][Math.floor(Math.random() * 6)] ?? 1;
       onEarn(amount);
       const p = document.createElement("span");
       p.textContent = `+$${amount}`;
@@ -101,7 +101,7 @@ export function CountUp({ to, prefix = "", suffix = "", duration = 1600 }: { to:
   useEffect(() => {
     const el = ref.current; if (!el) return;
     const io = new IntersectionObserver(([en]) => {
-      if (!en.isIntersecting) return;
+      if (!en?.isIntersecting) return;
       io.disconnect();
       const t0 = performance.now();
       const tick = (t: number) => {
